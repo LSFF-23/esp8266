@@ -9,7 +9,6 @@ d5 = Pin(14, Pin.IN, Pin.PULL_UP)
 d5_pressed = False
 def d5_keydown (event_pin):
     global d5_pressed
-    print(f"[{time.ticks_diff(time.ticks_ms(), ti):08d}] O botão {event_pin} foi pressionado!")
     d5_pressed = True
 
 d5.irq(trigger=Pin.IRQ_FALLING, handler=d5_keydown)
