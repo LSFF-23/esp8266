@@ -29,7 +29,7 @@ while True:
     
     if a0_raw > 0 and a0_raw < 1024:
         temperature = get_temp(a0_raw)
-        print(f"Raw: {a0_raw:04d} | Temperature: {temperature:02.1f}")
+        print(f"Raw: {a0_raw:04d} | Temperature: {temperature:02.1f} °C")
         if (temperature >= 37): # body temperature
             led.value(0)
     else:
